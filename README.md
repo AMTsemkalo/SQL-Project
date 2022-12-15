@@ -18,13 +18,13 @@ clients - клиенты, зарегисрированные в интернет
 <br/> delivery - доставка. 
 
 # Запросы
-
+1. Вывести количество заказов по городу Москва.
 ```sql
 SELECT client_id,email, num_of_orders 
 FROM customers WHERE city = 'Moscow' 
 ORDER BY num_of_orders DESC;
 ```
-```sql
+
 lient_id  |           email            | num_of_orders 
 ------------+----------------------------+--------------- 
   226986160 | mimimi@example.com         |            17 
@@ -34,4 +34,4 @@ lient_id  |           email            | num_of_orders
  5076174497 | trofim92@example.org       |             9 
  8584009841 | nonna29@example.org        |             1 
 (6 строк)
-```
+
