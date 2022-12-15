@@ -36,7 +36,7 @@ ORDER BY num_of_orders DESC;
 | 8584009841 | nonna29@example.org        |             1 |
 
 
-**1. Вывести количество товаров на конкретном складе.**
+**2. Вывести количество товаров на конкретном складе.**
 ```sql
 SELECT product_name, num_available, warehouse_id 
 FROM products WHERE warehouse_id = 7654 
