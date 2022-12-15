@@ -18,3 +18,9 @@ clients - клиенты, зарегисрированные в интернет
 <br/> delivery - доставка. 
 
 # Запросы
+
+```sql
+SELECT code, model, color, type, price
+FROM Printer
+WHERE Color = 'y'
+```
