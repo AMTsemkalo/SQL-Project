@@ -2,7 +2,8 @@
 # Итоговый проект: Интернет магазин (Ozon) 
 <br/> ...Находится в стадии разработки...
 # База данных
-![drawSQL-export-2022-12-15_03_47](https://user-images.githubusercontent.com/114655283/207746331-0890f5c1-ba9b-4766-ba2d-0648e9e51145.png)
+![drawSQL-export-2022-12-15_07_58](https://user-images.githubusercontent.com/114655283/207776379-3e7095ab-69a3-4261-97c2-4349dd190838.png)
+
 # Разъяснения названий
-<br/>
+
 # Запросы
