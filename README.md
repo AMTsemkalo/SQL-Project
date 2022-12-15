@@ -20,7 +20,18 @@ clients - клиенты, зарегисрированные в интернет
 # Запросы
 
 ```sql
-SELECT code, model, color, type, price
-FROM Printer
-WHERE Color = 'y'
+SELECT client_id,email, num_of_orders 
+FROM customers WHERE city = 'Moscow' 
+ORDER BY num_of_orders DESC;
+```
+```sql
+lient_id  |           email            | num_of_orders 
+------------+----------------------------+--------------- 
+  226986160 | mimimi@example.com         |            17 
+ 5980078452 | inga.kalinina@example.org  |            12 
+ 8709509488 | bonita@example.com         |            12 
+ 3654111661 | vorobev.taisia@example.com |            10 
+ 5076174497 | trofim92@example.org       |             9 
+ 8584009841 | nonna29@example.org        |             1 
+(6 строк)
 ```
