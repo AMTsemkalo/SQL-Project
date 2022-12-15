@@ -73,3 +73,24 @@ ORDER BY num_available DESC;
 | Silver_ring   |             5 |         7654 |
 | Deck_chair    |             4 |         7654 |
 | Rope          |             4 |         7654 |
+
+**3. Топ самых популярных товаров среди покупателей.**
+```sql
+SELECT product_id, count(product_id) 
+FROM purchases oc 
+GROUP BY product_id 
+ORDER BY count(product_id) DESC LIMIT 10;
+```
+|product_id | count 
+|----------------|:---------:|
+|        111 |     9 |
+|        125 |     4 |
+|        115 |     4 |
+|        114 |     4 |
+|        113 |     4 |
+|        117 |     3 |
+|        146 |     3 |
+|        124 |     3 |
+|        152 |     2 |
+|        188 |     2 |
+...
