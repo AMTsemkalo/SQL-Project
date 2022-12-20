@@ -11,7 +11,6 @@ CREATE TABLE "customers"(
     "id" BIGSERIAL PRIMARY KEY,
     "client_id" BIGINT REFERENCES clients (id),
     "city" VARCHAR(255) NOT NULL,
-    "num_of_orders" INTEGER NOT NULL,
     "email" VARCHAR(255) NOT NULL
 );
 
