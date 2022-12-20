@@ -303,3 +303,50 @@ ORDER BY product_name ASC LIMIT 15;
  |PlayStation    |             5 |
  |Purple_shoes   |             4 |
 
+**13. Товар и дата его заказа, сортировка по дате.** 
+```sql
+SELECT products.product_name, purchases.date_of_purchase 
+FROM products, purchases 
+WHERE products.id = purchases.product_id  
+ORDER BY date_of_purchase ASC LIMIT 25; 
+``` 
+ | product_name  | date_of_purchase |
+|----------------|:---------:|
+| Toaster        | 2022-12-01 |
+ |Choco_pie      | 2022-12-01 |
+| Marmalade      | 2022-12-01 |
+| Gummy_bear     | 2022-12-01 |
+| Angel          | 2022-12-01 |
+| Chocolate_bar  | 2022-12-01 |
+| Gum            | 2022-12-01 |
+| Red_skirt      | 2022-12-02 |
+| Red_skirt      | 2022-12-02 |
+| Toaster        | 2022-12-02 |
+| Alias          | 2022-12-02 |
+| Brick          | 2022-12-02 |
+| Chocolate_bar  | 2022-12-02 |
+| Purple_shoes   | 2022-12-02 |
+| Chess          | 2022-12-03 |
+| Pedestal       | 2022-12-03 |
+| Fondation      | 2022-12-03 |
+| Gummy_bear     | 2022-12-03 |
+| Lego           | 2022-12-03 |
+| Teapot         | 2022-12-04 |
+| Chocolate_bar  | 2022-12-04 |
+| Teapot         | 2022-12-04 |
+| Gummy_worms    | 2022-12-04 |
+| Christmas_tree | 2022-12-04 |
+| Chocolate_bar  | 2022-12-04|
+
+**14. Данные по доставке на определенное число.** 
+```sql
+SELECT * FROM delivery  
+WHERE delivery_term = '15/12/2022'; 
+```
+ 
+| id | order_id | delivery_term | delivery_way |      city       |  street   | house | flat |
+|----------------|:---------:|----------------:|----------------|:---------:|----------------:|:---------:|----------------:|
+| 49 |       49 | 2022-12-15    | courier      | Nizhny Novgorod | York Road |     2 |  167 |
+| 50 |       50 | 2022-12-15    | courier      | Anapa           | The Green |    45 |   90 |
+| 51 |       51 | 2022-12-15    | pickup       | Saratov         | The Grove |   175 |   47 |
+| 52 |       52 | 2022-12-15    | courier      | Vladimir        | Main Road |     2 |   43|
