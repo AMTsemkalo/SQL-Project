@@ -18,6 +18,7 @@ clients - клиенты, зарегисрированные в интернет
 <br/> delivery - доставка. 
 
 # Запросы
+Сразу отметим, что в запросах по которым выдается слишком большая таблица данных мы ставили лимит 15, для того чтобы не занимать слишком много места. Ведь суть состоит в том, чтобы показать что запрос работает и 15 первых значений вполне достаточно. 
 **1. Вывести количество заказов по городу Москва.**
 ```sql
 SELECT client_id,email, num_of_orders 
@@ -254,3 +255,51 @@ ORDER BY producer_name ASC LIMIT 15;
 | BeFit            | Kazahstan | Sport_ball |
 | BeFit            | Kazahstan | Rope |
 | BORK             | Russia    | Hairdryer |
+
+**11. Товары в алфитном порядке с лучшими оценками.** 
+```sql
+SELECT products.product_name, reviews.product_grade 
+FROM products, reviews 
+WHERE products.id = reviews.product_id AND reviews.product_grade = 5 
+ORDER BY product_name ASC; 
+```
+
+|product_name  | product_grade |
+|----------------|:---------:|
+ |Braclet       |             5 |
+ |Chocolate_bar |             5 |
+ |Gummy_bear    |             5 |
+ |Lego          |             5 |
+ |Lego          |             5 |
+ |Mask          |             5 |
+ |PlayStation   |             5 |
+ |Red_skirt     |             5 |
+ |TV            |             5|
+ 
+ 
+**12. Товары в алфитном порядке с оценками.** 
+```sql
+SELECT products.product_name, reviews.product_grade 
+FROM products, reviews 
+WHERE products.id = reviews.product_id  
+ORDER BY product_name ASC LIMIT 15; 
+```
+ 
+|  product_name  | product_grade |
+|----------------|:---------:|
+ |Braclet        |             5 |
+ |Chess          |             4 |
+ |Chocolate_bar  |             5 |
+ |Christmas_tree |             4 |
+ |Earings        |             4 |
+ |Fondation      |             2 |
+ |Gum            |             3 |
+ |Gummy_bear     |             1 |
+ |Gummy_bear     |             5 |
+ |Lego           |             5 |
+ |Lego           |             5 |
+ |Mask           |             5 |
+ |Monopoly       |             3 |
+ |PlayStation    |             5 |
+ |Purple_shoes   |             4 |
+
