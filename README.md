@@ -3,7 +3,7 @@
 <br/> ddl.sql - файл со структурой бд
 <br/> data.sql - файл с заполнением бд
 # База данных
-![drawSQL-export-2022-12-15_07_58](https://user-images.githubusercontent.com/114655283/207776379-3e7095ab-69a3-4261-97c2-4349dd190838.png)
+![drawSQL-export-2022-12-20_09_15](https://user-images.githubusercontent.com/114655283/208596862-4f8ee5aa-c53d-44a7-996a-8eb9ca2ba3d4.png)
 
 # Разъяснения названий
 clients - клиенты, зарегисрированные в интернет магазине пользователи.
