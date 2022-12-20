@@ -256,7 +256,7 @@ ORDER BY producer_name ASC LIMIT 15;
 | BeFit            | Kazahstan | Rope |
 | BORK             | Russia    | Hairdryer |
 
-**11. Товары в алфитном порядке с лучшими оценками.** 
+**11. Товары в алфавитном порядке с лучшими оценками.** 
 ```sql
 SELECT products.product_name, reviews.product_grade 
 FROM products, reviews 
@@ -277,7 +277,7 @@ ORDER BY product_name ASC;
  |TV            |             5|
  
  
-**12. Товары в алфитном порядке с оценками.** 
+**12. Товары в алфавитном порядке с оценками.** 
 ```sql
 SELECT products.product_name, reviews.product_grade 
 FROM products, reviews 
