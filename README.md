@@ -165,7 +165,7 @@ ORDER BY product_name ASC LIMIT 15;
 | Eyeshadows| 
 | Faceclean|
 
-**6. Сумма доставок курьером и самовывозом**
+**7. Сумма доставок курьером и самовывозом**
 ```sql
 SELECT delivery_way, count(*) AS delivery_way_count  
 FROM delivery  
@@ -177,3 +177,27 @@ ORDER BY delivery_way_count DESC;
 |----------------|:---------:|
 | courier      |                 34 |
 | pickup       |                 33|
+
+
+**8. Количество покупателей из разных городов**
+```sql
+SELECT city, count(*) AS city_count  
+FROM customers  
+GROUP BY city  
+ORDER BY city_count DESC; 
+``` 
+ 
+|       city       | city_count |
+|----------------|:---------:|
+| Anapa            |          8 |
+| Vladimir         |          7 |
+| Saratov          |          7 |
+| Moscow           |          6 |
+| Perm             |          6 |
+| Yekaterinburg    |          6 |
+| Penza            |          6 |
+| Nizhny Novgorod  |          6 |
+| Barnaul          |          5 |
+| Saint-Petersburg |          5 |
+| Krasnodar        |          3 |
+| Kaliningrad      |          2 |
