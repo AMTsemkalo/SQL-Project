@@ -165,7 +165,7 @@ ORDER BY product_name ASC LIMIT 15;
 | Eyeshadows| 
 | Faceclean|
 
-**7. Сумма доставок курьером и самовывозом**
+**7. Сумма доставок курьером и самовывозом.**
 ```sql
 SELECT delivery_way, count(*) AS delivery_way_count  
 FROM delivery  
@@ -179,7 +179,7 @@ ORDER BY delivery_way_count DESC;
 | pickup       |                 33|
 
 
-**8. Количество покупателей из разных городов**
+**8. Количество покупателей из разных городов.**
 ```sql
 SELECT city, count(*) AS city_count  
 FROM customers  
@@ -201,3 +201,28 @@ ORDER BY city_count DESC;
 | Saint-Petersburg |          5 |
 | Krasnodar        |          3 |
 | Kaliningrad      |          2 |
+
+**9.Товары в алфавитном порядке и склады, где они находятся.**
+```sql
+SELECT products.product_name, warehouses.warehouse_name 
+FROM products, warehouses 
+WHERE products.warehouse_id = warehouses.id  
+ORDER BY product_name ASC LIMIT 15; 
+``` 
+| product_name  | warehouse_name |
+|----------------|:---------:|
+| Alias         | Petrograd |
+| Angel         | Petrograd |
+| Backpack      | Ambar |
+| Barbell       | Lavka |
+| Bear_toy      | Petrograd |
+| Bleach        | Klad |
+| Blue_skirt    | Depo |
+| Braclet       | Lavka |
+| Brick         | Depo |
+| Broom         | Depo |
+| Brown_trouses | Ambar |
+| Candles       | Zapas |
+| Cettlebell    | Zapas |
+| Chair         | Klad |
+| Chess         | Petrograd|
