@@ -226,3 +226,31 @@ ORDER BY product_name ASC LIMIT 15;
 | Cettlebell    | Zapas |
 | Chair         | Klad |
 | Chess         | Petrograd|
+
+
+
+**10. Производитель, страна и продукт в алфавитном порядке (по производителю).** 
+```sql
+SELECT producers.producer_name, producers.country, products.product_name 
+FROM producers, products 
+WHERE producers.id = products.producer_id  
+ORDER BY producer_name ASC LIMIT 15; 
+``` 
+ 
+| producer_name   |  country  | product_name |
+|----------------|:---------:|----------------:|
+| Adidas           | Germany   | Backpack |
+| Adidas           | Germany   | Blue_skirt |
+| Adidas           | Germany   | Brown_trouses |
+| AMAY             | Russia    | Coffe |
+| Atlanta_jewelery | Russia    | Losion |
+| Atlanta_jewelery | Russia    | Silver_ring |
+| Atlanta_jewelery | Russia    | Mask |
+| Atlanta_jewelery | Russia    | Consiler |
+| Atlanta_jewelery | Russia    | Eyeshadows |
+| Atlanta_jewelery | Russia    | Braclet |
+| Atlanta_jewelery | Russia    | Diadema |
+| BeFit            | Kazahstan | Skipping_rope |
+| BeFit            | Kazahstan | Sport_ball |
+| BeFit            | Kazahstan | Rope |
+| BORK             | Russia    | Hairdryer |
