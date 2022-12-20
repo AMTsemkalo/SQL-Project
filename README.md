@@ -137,3 +137,30 @@ GROUP BY clients.id LIMIT 15;
 | 2662122838 |
 | 6182643242|
 
+**6. товары, которые не заказывали (первые 15 в алфавитном порядке).**
+```sql
+SELECT products.product_name 
+FROM products AS products 
+LEFT JOIN purchases ON purchases.product_id = products.id 
+WHERE purchases.product_id IS NULL 
+GROUP BY products.id 
+ORDER BY product_name ASC LIMIT 15; 
+```
+
+| product_name |
+|----------------|
+| Backpack |
+| Broom |
+| Cettlebell |
+| Chair |
+| Coffe |
+| Compas |
+| Computer |
+| Consiler |
+| Deodorizer| 
+| Desk |
+| Diadema| 
+| Doll |
+| Eyeliner |
+| Eyeshadows| 
+| Faceclean|
