@@ -137,7 +137,7 @@ GROUP BY clients.id LIMIT 15;
 | 2662122838 |
 | 6182643242|
 
-**6. товары, которые не заказывали (первые 15 в алфавитном порядке).**
+**6. Товары, которые не заказывали (первые 15 в алфавитном порядке).**
 ```sql
 SELECT products.product_name 
 FROM products AS products 
@@ -164,3 +164,16 @@ ORDER BY product_name ASC LIMIT 15;
 | Eyeliner |
 | Eyeshadows| 
 | Faceclean|
+
+**6. Сумма доставок курьером и самовывозом**
+```sql
+SELECT delivery_way, count(*) AS delivery_way_count  
+FROM delivery  
+GROUP BY delivery_way  
+ORDER BY delivery_way_count DESC; 
+``` 
+ 
+| delivery_way | delivery_way_count |
+|----------------|:---------:|
+| courier      |                 34 |
+| pickup       |                 33|
