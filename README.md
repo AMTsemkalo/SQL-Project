@@ -94,3 +94,46 @@ ORDER BY count(product_id) DESC LIMIT 10;
 |        152 |     2 |
 |        188 |     2 |
 ...
+
+**4. Топ 5 складов по количеству товаров .**
+```sql
+SELECT warehouse_name, sum(num_available) 
+FROM products 
+LEFT JOIN warehouses on warehouses.id = products.warehouse_id  
+GROUP BY warehouse_name 
+ORDER BY sum DESC LIMIT 5;       
+``` 
+| warehouse_name | sum 
+|----------------|:---------:|
+|       Petrograd  | 975 |
+|       Depo  | 702 |
+|       Klad  | 466 |
+|       Zapas | 406 |
+|       Lavka | 373 |
+
+**5. Запрос id первых 15 зарегистрировавшихся, которые ничего не купили.** 
+```sql
+SELECT clients.id 
+FROM clients AS clients 
+LEFT JOIN customers ON customers.client_id = clients.id 
+WHERE customers.client_id IS NULL 
+GROUP BY clients.id LIMIT 15; 
+```
+     id 
+|----------------|
+|9189815114 |
+| 5214359438 |
+|  540622141 |
+| 5340604284 |
+|  274466945 |
+| 3968056159 |
+| 6584388425 |
+| 7679617074 |
+| 4839181594 |
+| 6272710070 |
+| 1681615436 |
+| 9552719135 |
+| 4622116979 |
+| 2662122838 |
+| 6182643242|
+
