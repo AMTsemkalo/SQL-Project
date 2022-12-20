@@ -119,7 +119,7 @@ LEFT JOIN customers ON customers.client_id = clients.id
 WHERE customers.client_id IS NULL 
 GROUP BY clients.id LIMIT 15; 
 ```
-     id 
+|     id |
 |----------------|
 |9189815114 |
 | 5214359438 |
