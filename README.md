@@ -350,3 +350,29 @@ WHERE delivery_term = '15/12/2022';
 | 50 |       50 | 2022-12-15    | courier      | Anapa           | The Green |    45 |   90 |
 | 51 |       51 | 2022-12-15    | pickup       | Saratov         | The Grove |   175 |   47 |
 | 52 |       52 | 2022-12-15    | courier      | Vladimir        | Main Road |     2 |   43|
+
+
+**15. id клиента, его имя (логин), дату регистрации и дату покупки, отсортировано по имени (логину) клиента .**  
+```sql
+SELECT customers.client_id, clients.login, clients.reg_date, purchases.date_of_purchase 
+FROM customers, clients,purchases 
+WHERE customers.client_id = clients.id AND customers.id = purchases.customer_id 
+ORDER BY clients.login ASC LIMIT 15;
+```
+|client_id  |  login   |  reg_date  | date_of_purchase |
+|----------------|:---------:|----------------:|----------------|:
+| 3473728578 | Alice    | 2022-11-09 | 2022-12-09 |
+| 4316344455 | Ange     | 2022-06-05 | 2022-12-02 |
+| 9298755783 | Arlena   | 2022-01-07 | 2022-12-01 |
+| 9297237339 | Aubert   | 2022-03-04 | 2022-12-02 |
+| 6689856828 | Binky    | 2022-08-08 | 2022-12-01 |
+| 1602519722 | Blondell | 2022-04-03 | 2022-12-09 |
+| 3636514407 | Brant    | 2021-01-12 | 2022-12-01 |
+| 7291197937 | Chris    | 2021-01-12 | 2022-12-08 |
+| 3726462430 | Chrissy  | 2022-04-02 | 2022-12-08 |
+| 9118785476 | Clemens  | 2022-12-04 | 2022-12-06 |
+| 6414008273 | Costanza | 2022-01-04 | 2022-12-04 |
+| 6414008273 | Costanza | 2022-01-04 | 2022-12-04 |
+|  797038086 | Cymbre   | 2022-04-07 | 2022-12-11 |
+| 6546737698 | Dag      | 2022-01-04 | 2022-12-08 |
+| 8709509488 | Dot      | 2022-02-03 | 2022-12-11|
